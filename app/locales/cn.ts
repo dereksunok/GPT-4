@@ -12,7 +12,7 @@ const cn = {
 |体验专用|24万字问答额度|100万字问答额度|
 |[获取体验](https://e.northviewer.cn/2023-07-chatgpt-3416.html)|[立即获取](https://e.northviewer.cn/2023-07-chatgpt-3424.html)|[专属通道](https://e.northviewer.cn/2023-07-chatgpt-3425.html)|
 
-或者，您可以免费体验：[ChatGPT 3.5](https://gpt.everyone-ai.shop/),
+或者，您可以免费体验更佳便捷的：[ChatGPT 3.5](https://gpt.everyone-ai.shop/)
     `,
     // Unauthorized:
     // "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
