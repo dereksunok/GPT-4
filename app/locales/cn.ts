@@ -5,7 +5,7 @@ const cn = {
   Error: {
     Unauthorized: `请在 [设置](/#/settings) 页填入你自己的访问密钥（API Key）。
 
-立即获取体验密钥，获取后不限使用时长：
+扫码或点击链接，获取GPT-4密钥，获取后不限使用时长：
 |   体验版 GPT-4   |   畅享版 GPT-4   |   尊贵版 GPT-4   |
 |:------:|:------:|:------:|
 |![体验版](https://e.northviewer.cn/wp-content/uploads/2023/07/tiyan.html.png)|![畅享版](https://e.northviewer.cn/wp-content/uploads/2023/07/changxiang.html.png)|![尊贵版](https://e.northviewer.cn/wp-content/uploads/2023/07/zunxiang.html.png)|

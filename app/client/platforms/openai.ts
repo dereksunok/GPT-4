@@ -126,17 +126,24 @@ export class ChatGPTApi implements LLMApi {
             ) {
               const responseTexts = [responseText];
               let extraInfo = await res.clone().text();
+              let extraInfoError = false;
               try {
                 const resJson = await res.clone().json();
+
                 // 定义正则表达式 过滤 文本 https://afdian.net/a/yidadaa
                 const reg = /https:\/\/afdian.net\/a\/yidadaa/g;
+                // 判断 prettyObject(resJson) 是否包含 reg 条件
+                if (prettyObject(resJson) && prettyObject(resJson).match(reg)) {
+                  extraInfoError = true;
+                }
+
                 extraInfo = prettyObject(resJson).replace(
                   reg,
                   "https://e.northviewer.cn/2023-07-chatgpt-3425.html",
                 );
               } catch {}
 
-              if (res.status === 401) {
+              if (res.status === 401 || extraInfoError) {
                 responseTexts.push(Locale.Error.Unauthorized);
               }
 
