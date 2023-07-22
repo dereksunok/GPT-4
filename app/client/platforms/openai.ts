@@ -83,9 +83,6 @@ export class ChatGPTApi implements LLMApi {
         headers: getHeaders(),
       };
 
-      // 添加调试
-      debugger;
-
       // make a fetch request
       const requestTimeoutId = setTimeout(
         () => controller.abort(),
@@ -131,7 +128,12 @@ export class ChatGPTApi implements LLMApi {
               let extraInfo = await res.clone().text();
               try {
                 const resJson = await res.clone().json();
-                extraInfo = prettyObject(resJson);
+                // 定义正则表达式 过滤 文本 https://afdian.net/a/yidadaa
+                const reg = /https:\/\/afdian.net\/a\/yidadaa/g;
+                extraInfo = prettyObject(resJson).replace(
+                  reg,
+                  "https://e.northviewer.cn/2023-07-chatgpt-3425.html",
+                );
               } catch {}
 
               if (res.status === 401) {
