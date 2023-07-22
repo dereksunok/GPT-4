@@ -11,6 +11,7 @@ import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
 import DragIcon from "../icons/drag.svg";
+import CopyIcon from "../icons/copy.svg";
 
 import Locale from "../locales";
 
@@ -118,11 +119,9 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          ChatGPT Next
+          GPT-4
         </div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
-        </div>
+        <div className={styles["sidebar-sub-title"]}>国内直连版-GPT-4</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -143,6 +142,21 @@ export function SideBar(props: { className?: string }) {
           onClick={() => showToast(Locale.WIP)}
           shadow
         />
+        {location.search && location.search.indexOf("w") > -1 ? (
+          <Link
+            target="_blank"
+            to={location.origin}
+            style={{ textDecoration: "none" }}
+          >
+            <IconButton
+              icon={<CopyIcon />}
+              text={"全屏展示"}
+              className={styles["sidebar-bar-button"]}
+              onClick={() => showToast(Locale.WIP)}
+              shadow
+            />
+          </Link>
+        ) : null}
       </div>
 
       <div
@@ -169,15 +183,15 @@ export function SideBar(props: { className?: string }) {
             />
           </div>
           <div className={styles["sidebar-action"]}>
-            <Link to={Path.Settings}>
-              <IconButton icon={<SettingsIcon />} shadow />
+            <Link to={Path.Settings} style={{ textDecoration: "none" }}>
+              <IconButton icon={<SettingsIcon />} text="设置" shadow />
             </Link>
           </div>
-          <div className={styles["sidebar-action"]}>
+          {/* <div className={styles["sidebar-action"]}>
             <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />
             </a>
-          </div>
+          </div> */}
         </div>
         <div>
           <IconButton

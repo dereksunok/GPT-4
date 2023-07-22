@@ -3,8 +3,19 @@ import { SubmitKey } from "../store/config";
 const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
-    Unauthorized:
-      "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
+    Unauthorized: `请在 [设置](/#/settings) 页填入你自己的访问密钥（API Key）。
+
+立即获取体验密钥，获取后不限使用时长：
+|   体验版 GPT-4   |   畅享版 GPT-4   |   尊贵版 GPT-4   |
+|:------:|:------:|:------:|
+|![体验版](https://e.northviewer.cn/wp-content/uploads/2023/07/tiyan.html.png)|![畅享版](https://e.northviewer.cn/wp-content/uploads/2023/07/changxiang.html.png)|![尊贵版](https://e.northviewer.cn/wp-content/uploads/2023/07/zunxiang.html.png)|
+|体验专用|24万字问答额度|100万字问答额度|
+|[获取体验](https://e.northviewer.cn/2023-07-chatgpt-3416.html)|[立即获取](https://e.northviewer.cn/2023-07-chatgpt-3424.html)|[专属通道](https://e.northviewer.cn/2023-07-chatgpt-3425.html)|
+
+或者，您可以免费体验：[ChatGPT 3.5](https://gpt.everyone-ai.shop/),
+    `,
+    // Unauthorized:
+    // "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。",
   },
   Auth: {
     Title: "需要密码",
@@ -257,7 +268,18 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗",
+    BotHello: "欢迎体验GPT-4，畅所欲言，释放内心疑问！",
+    //  BotHello: `请在 [设置](/#/settings) 页填入你自己的访问密钥（API Key）。
+
+    // 立即获取体验密钥，获取后不限使用时长：
+    // |   体验版 GPT-4   |   畅享版 GPT-4   |   尊贵版 GPT-4   |
+    // |:------:|:------:|:------:|
+    // |![体验版](https://e.northviewer.cn/wp-content/uploads/2023/07/tiyan.html.png)|![畅享版](https://e.northviewer.cn/wp-content/uploads/2023/07/changxiang.html.png)|![尊贵版](https://e.northviewer.cn/wp-content/uploads/2023/07/zunxiang.html.png)|
+    // |体验专用|24万字问答额度|100万字问答额度|
+    // |[获取体验](https://e.northviewer.cn/2023-07-chatgpt-3416.html)|[立即获取](https://e.northviewer.cn/2023-07-chatgpt-3424.html)|[专属通道](https://e.northviewer.cn/2023-07-chatgpt-3425.html)|
+
+    // 或者，您可以免费体验：[ChatGPT 3.5](https://gpt.everyone-ai.shop/),
+    //     `,
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
