@@ -2,6 +2,38 @@ import { BuiltinMask } from "./typing";
 
 export const CN_MASKS: BuiltinMask[] = [
   {
+    avatar: "1f916",
+    name: "GPT-4智能对话",
+    context: [
+      {
+        id: "GPT-4-chat-0",
+        role: "user",
+        content: "你好，GPT-4！",
+        date: "",
+      },
+      {
+        id: "GPT-4-chat-1",
+        role: "assistant",
+        content:
+          "你好，我是OpenAI开发的GPT-4。我是一个强大的语言模型，可以回答各种问题、提供信息和支持对话。请问有什么需要帮助？",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-4",
+      temperature: 0.5,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1690332396721,
+  },
+  {
     avatar: "1f5bc-fe0f",
     name: "以文搜图",
     context: [
