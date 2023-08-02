@@ -144,6 +144,15 @@ export class ChatGPTApi implements LLMApi {
                   reg,
                   "https://e.northviewer.cn/2023-07-chatgpt-3425.html",
                 );
+
+                if (
+                  extraInfo.indexOf("api.nextweb.fun") > -1 ||
+                  extraInfo.indexOf("旧版") > -1 ||
+                  extraInfo.indexOf("爱发电") > -1
+                ) {
+                  extraInfo =
+                    '```json\n{\n  "error": true,\n  "msg": "出错了，你的密钥可能过期了，续费请联系客服。"\n}\n```';
+                }
               } catch {}
 
               if (res.status === 401 || extraInfoError) {
