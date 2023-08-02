@@ -133,7 +133,10 @@ export class ChatGPTApi implements LLMApi {
                 // 定义正则表达式 过滤 文本 https://afdian.net/a/yidadaa
                 const reg = /https:\/\/afdian.net\/a\/yidadaa/g;
                 // 判断 prettyObject(resJson) 是否包含 reg 条件
-                if (prettyObject(resJson) && prettyObject(resJson).match(reg)) {
+                if (
+                  (prettyObject(resJson) && prettyObject(resJson).match(reg)) ||
+                  resJson.error == true
+                ) {
                   extraInfoError = true;
                 }
 
