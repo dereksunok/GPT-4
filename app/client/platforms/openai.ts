@@ -148,6 +148,9 @@ export class ChatGPTApi implements LLMApi {
                 if (
                   extraInfo.indexOf("api.nextweb.fun") > -1 ||
                   extraInfo.indexOf("旧版") > -1 ||
+                  extraInfo.indexOf("子密钥") > -1 ||
+                  extraInfo.indexOf("327680") > -1 ||
+                  extraInfo.indexOf("充值") > -1 ||
                   extraInfo.indexOf("爱发电") > -1
                 ) {
                   extraInfo =
