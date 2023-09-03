@@ -9,7 +9,7 @@ const cn = {
 | 体验版 GPT-4 | 畅享版 GPT-4 | 尊贵版 GPT-4 |
 |:------:|:------:|:------:|
 |![体验版](https://e.northviewer.cn/wp-content/uploads/2023/07/tiyan.html.png)|![畅享版](https://e.northviewer.cn/wp-content/uploads/2023/07/changxiang.html.png)|![尊贵版](https://e.northviewer.cn/wp-content/uploads/2023/07/zunxiang.html.png)|
-|48万tokens问答额度|100万tokens问答额度|200万tokens问答额度|
+|50万tokens问答额度|100万tokens问答额度|200万tokens问答额度|
 |[获取体验](https://e.northviewer.cn/2023-07-chatgpt-3416.html)|[立即获取](https://e.northviewer.cn/2023-07-chatgpt-3424.html)|[专属通道](https://e.northviewer.cn/2023-07-chatgpt-3425.html)|
 
 或者，您可以免费体验：[直连版·ChatGPT 3.5](https://eazy.everyone-ai.shop/)
